@@ -1,0 +1,880 @@
+/* -------------------- GLOBAL RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -------------------- WRAPPER -------------------- */
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 5px;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav img {
+  width: 80px;
+  height: 80px;
+}
+
+#nav-link {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 28px;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  #nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  #nav-link {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: white; /* Mobile nav background */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  #nav-link.show {
+    display: flex;
+  }
+
+  #nav-link li {
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: auto;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* -------------------- HAMBURGER MENU -------------------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.hero-section {
+  background: linear-gradient(to right, #a2dea7, #c3f5cb); /* Soft green gradient */
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.hero-text {
+  color: #003366;
+  max-width: 600px;
+}
+
+.hero-text h5 {
+  color: #004aad;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.highlight-text {
+  color: #ffdd57;
+}
+
+.hero-subtext {
+  color: #f8f8f8;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  background-color: #004aad;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #003366;
+}
+
+.dog-imgg img {
+  width: 340px;
+  height: auto;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .dog-imgg img {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------- NGO SECTION -------------------- */
+.ngo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ngo-card {
+  background: #e6f2e6; /* NGO card background */
+  padding: 15px;
+  border-left: 5px solid #2e8b57;
+  border-radius: 6px;
+}
+
+/* -------------------- DOG BREED SECTION -------------------- */
+.dog-page {
+  background: #f2f9f4; /* Dog breed page background */
+  padding: 40px 0;
+}
+
+.dog-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dog-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.dog-search {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.dog-search:focus {
+  outline: none;
+  box-shadow: 0 0 6px #4caf50;
+}
+
+.dog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.dog-card {
+  background: #ffffff; /* Dog card background */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.dog-card h4 {
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin: 0 0 10px;
+}
+
+.dog-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 6px 0;
+}
+
+.dog-card p strong {
+  color: #1a3d2b;
+}
+
+/* -------------------- CONTACT PAGE -------------------- */
+/* Background image for the whole contact section */
+.contact-bg {
+  background-image: url('/static/image/png116.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+/* Quotation styling */
+.quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+/* Existing contact form styles */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95); /* slightly transparent white */
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #004aad;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+  background-color: #0056b3;
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  background-color: #e0f2f1; /* Footer background */
+  color: #2e7d32;
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+  border-top: 3px solid #4caf50;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: auto;
+}
+
+.footer-logo h3 {
+  margin-top: 10px;
+  color: #1e88e5;
+  font-size: 1.5rem;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+.footer-contact h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1e88e5;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #a5d6a7;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #4e7d6b;
+}
+
+
+/* *******this is for health tips ke liye hai **** */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.card p, .card li {
+  line-height: 1.6;
+}
+main.wrapper {
+  padding: 100px 0; /* Remove left/right padding */
+}
+
+.card-grid {
+  padding: 0 40px; /* Add padding inside grid for layout */
+}
+
+
+
+.section-container {
+  padding: 1.5rem;
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.card-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-card {
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  height: 8rem;
+  width: 8rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #4b5563; /* gray-600 */
+  font-size: 1rem;
+}
+/* ******this is for mission section of the home page . */
+.mission-section {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.mission-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-content {
+  flex: 1;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.video-container {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mission-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.mission{
+  padding-left: 5px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+
+
+
+/* ****Adoption page ****************** */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HERO SECTION WITH BACKGROUND IMAGE */
+.hero-section.hero-bg.adoption-page {
+  background: url('/static/image/png112.jpg') center center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.hero-section.hero-bg.adoption-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h5 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #c8e6c9;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  color: #ffcc70;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: #66bb6a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #43a047;
+}
+
+.dog-imgg {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dog-imgg img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* WHY ADOPT SECTION */
+.why-adopt {
+  background-color: #f1fdf5;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.text-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.text-block ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.image-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ADOPTABLE DOGS SECTION */
+.dog-listing {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.dog-listing h2 {
+  font-size: 2.8rem;
+  color: #2e7d32;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dog-card {
+  background-color: #eafaf1;
+  padding: 20px;
+  border-radius: 14px;
+  width: 280px;
+  box-shadow: 0 6px 16px rgba(0, 128, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-8px);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.dog-card h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.dog-card p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.adopt-btn {
+  display: inline-block;
+  background-color: #66bb6a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #388e3c;
+}
+
+
+/* Dogs Listing Section */
+.dog-listing {
+  background-color: #f7fcf9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dog-listing h2 {
+  font-size: 2.5em;
+  color: #2e8b57;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dog-card {
+  background-color: #ffffff;
+  border: 1px solid #dff0e2;
+  border-radius: 14px;
+  width: 260px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-8px);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.dog-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.3em;
+  color: #444;
+}
+
+.dog-card p {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.adopt-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #79df69;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #ff7f50;
+}
+.info-card1 {
+  background-color: #f1fdf5;
+  padding: 25px 20px;
+  border-radius: 14px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 128, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card1:hover {
+  transform: translateY(-6px);
+}
+
+.card-image1 {
+  width: 90%;             /* slightly smaller than full card */
+  height: 260px;          /* adjust height to keep balance */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Quick-link{
+color:green;
+}
+#f{
+  color: #2e8b57;
+}
