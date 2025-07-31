@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnimalCare</title>
-  <link rel="stylesheet" href="/static/css/index.css" />
-  <script defer src="/static/script.js"></script>
+  <link rel="stylesheet" href="static/css/index.css" />
+  <script defer src="static/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Header (moved from <head> to here) -->
   <header id="nav" class="wrapper">
     <div class="logo">
-      <a href="/Home.html">
-        <img src="/static/image/logo1.png" alt="Logo">
+      <a href="Home.html">
+        <img src="static/image/logo1.png" alt="Logo">
       </a>
     </div>
     <div class="menu-toggle" id="mobile-menu">
@@ -18,84 +22,75 @@
     </div>
     <nav>
       <ul id="nav-link" class="flex">
-        <li><a href="/Home.html">Home</a></li>
-        <li><a href="/Adoption.html">Adoption</a></li>
-        <li><a href="/Health.html">Health Tips</a></li>
-        <li><a href="/Ngo.html">NGO</a></li>
-        <li><a href="/Contact.html">Contact</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Adoption.html">Adoption</a></li>
+        <li><a href="Health.html">Health Tips</a></li>
+        <li><a href="Ngo.html">NGO</a></li>
+        <li><a href="Contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-</head>
-
-<body>
-
 
   <main>
-<section class="hero-section hero-bg">
-    <div class="hero-wrapper">
-      <!-- Hero Text -->
-      <div class="hero-text">
-        <h5>TURNING EMPATHY INTO CHANGE</h5>
-        <h1>
-          A Future Where<br />
-          <span class="highlight-text">Stray Animals Thrive</span>
-        </h1>
-        <p class="hero-subtext">
-          Join us in creating a world where every animal is cared for, protected, and loved.
-        </p>
-        <a href="#mission" class="hero-btn">Learn More</a>
-      </div>
+    <section class="hero-section hero-bg">
+      <div class="hero-wrapper">
+        <div class="hero-text">
+          <h5>TURNING EMPATHY INTO CHANGE</h5>
+          <h1>
+            A Future Where<br />
+            <span class="highlight-text">Stray Animals Thrive</span>
+          </h1>
+          <p class="hero-subtext">
+            Join us in creating a world where every animal is cared for, protected, and loved.
+          </p>
+          <a href="#mission" class="hero-btn">Learn More</a>
+        </div>
 
-      <!-- Hero Image -->
-      <div class="dog-imgg">
-        <img src="/static/image/png117.jpg" alt="Stray Dog Image" />
+        <div class="dog-imgg">
+          <img src="static/image/png117.jpg" alt="Stray Dog Image" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
     <h1 style="text-align: center; color: #004aad; font-size: 3.5rem; font-weight: 800;">
       Compassion for strays Isn't Optional - It's Overdue.
     </h1>
-    <!-- //Learn more pe click kro to yhi aaoge  -->
-    <section id="mission"class="section-container">
 
+    <section id="mission" class="section-container">
       <div class="card-grid">
-  <!-- 1 big div contains 6 small card components  -->
-        <div class="info-card">
 
-          <img src="/static/image/png1.png" alt="" class="card-image" />
+        <div class="info-card">
+          <img src="static/image/png1.png" alt="" class="card-image" />
           <h2 class="card-title">Stray Dog and Cat Population</h2>
-          <p class="card-text">Approximately 62 million stray dogs and 9.1 million stray cats are found across India.
-          </p>
+          <p class="card-text">Approximately 62 million stray dogs and 9.1 million stray cats are found across India.</p>
         </div>
 
         <div class="info-card">
-          <img src="/static/image/png2.png" alt="" class="card-image" />
+          <img src="static/image/png2.png" alt="" class="card-image" />
           <h2 class="card-title">Social Public Visibility</h2>
           <p class="card-text">77% of Indians encounter stray dogs weekly, while 68% see stray cats regularly.</p>
         </div>
 
         <div class="info-card">
-          <img src="/static/image/png3.png" alt="" class="card-image" />
+          <img src="static/image/png3.png" alt="" class="card-image" />
           <h2 class="card-title">Homelessness of Companion Animals</h2>
           <p class="card-text">Around 85% of companion animals in India are homeless.</p>
         </div>
 
         <div class="info-card">
-          <img src="/static/image/png4.png" alt="" class="card-image" />
+          <img src="static/image/png4.png" alt="" class="card-image" />
           <h2 class="card-title">Zoonotic Disease Risk</h2>
-          <p class="card-text">Stray animals contribute to the spread of zoonotic diseases like rabies, posing public
-            health threats.</p>
+          <p class="card-text">Stray animals contribute to the spread of zoonotic diseases like rabies, posing public health threats.</p>
         </div>
 
         <div class="info-card">
-          <img src="/static/image/png5.png" alt="" class="card-image" />
+          <img src="static/image/png5.png" alt="" class="card-image" />
           <h2 class="card-title">Population Control</h2>
           <p class="card-text">Methods like TNR and contraception are used but face infrastructure challenges.</p>
         </div>
 
         <div class="info-card">
-          <img src="/static/image/png6.png" alt="" class="card-image" />
+          <img src="static/image/png6.png" alt="" class="card-image" />
           <h2 class="card-title">Awareness and Access</h2>
           <p class="card-text">Awareness about animal welfare is growing, but consistent veterinary care is limited.</p>
         </div>
@@ -103,134 +98,93 @@
       </div>
     </section>
 
-<!-- //this page contains our mission section and the youtube video representing section  -->
-<section class="mission-section">
-  <div class="mission-wrapper">
-    
-    <!-- Text Content -->
-    <div class="mission-content">
-      <h1 class="section-title">Our Mission</h1>
-      <p class="section-text">
-        We are committed to rescuing, rehabilitating, and protecting animals in distress, ensuring they receive the
-        care they deserve. Our efforts include swift emergency rescues, life-saving medical treatment, and long-term
-        rehabilitation to give animals a second chance at life. Beyond immediate aid, we focus on raising public
-        awareness to foster a compassionate society where animals are free from abuse, neglect, and suffering. Through
-        education and outreach, we inspire communities to take responsibility for animal welfare and promote lasting
-        change. Together, we can create a safe, loving environment where all animals thrive and live with dignity and
-        care.
-      </p>
-    </div>
+    <section class="mission-section">
+      <div class="mission-wrapper">
 
-  <!-- for change the link of the src tag or video change you have to used embed directly copied link will not work  -->
-    <div class="video-container">
-      <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/REIGWH6Tedw"
-        title="Animal Caretaker Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
+        <div class="mission-content">
+          <h1 class="section-title">Our Mission</h1>
+          <p class="section-text">
+            We are committed to rescuing, rehabilitating, and protecting animals in distress, ensuring they receive the
+            care they deserve. Our efforts include swift emergency rescues, life-saving medical treatment, and long-term
+            rehabilitation to give animals a second chance at life. Beyond immediate aid, we focus on raising public
+            awareness to foster a compassionate society where animals are free from abuse, neglect, and suffering.
+          </p>
+        </div>
 
-  </div>
-</section>
+        <div class="video-container">
+          <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/REIGWH6Tedw"
+            title="Animal Caretaker Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
 
+      </div>
+    </section>
 
+    <section class="section-container">
+      <div class="section-header">
+        <h1>Our Values</h1>
+      </div>
 
+      <div class="card-grid">
+        <div class="info-card">
+          <img src="static/image/png7.png" alt="Compassion" />
+          <h1 class="card-title">Compassion</h1>
+          <p class="card-text">We believe in showing empathy and care for every animal, recognizing that their lives are
+            as valuable, meaningful, and precious as our own.</p>
+        </div>
 
-<!-- //Again section tag with 3 small card components  -->
- <section class="section-container">
-  <div class="section-header">
-    <h1>Our Values</h1>
-  </div>
+        <div class="info-card">
+          <img src="static/image/png9.png" />
+          <h1 class="card-title">Community</h1>
+          <p class="card-text">We understand that lasting change comes from collective effort and work closely with communities to raise
+            awareness and educate on animal rights.</p>
+        </div>
 
-  <div class="card-grid">
-    <div class="info-card">
-      <img src="/static/image/png7.png" alt="Compassion" />
-      <h1 class="card-title">Compassion</h1>
-      <p class="card-text">We believe in showing empathy and care for every animal, recognizing that their lives are
-        as valuable, meaningful, and precious as our own.</p>
-    </div>
-
-    <div class="info-card">
-      <img src="/static/image/png9.png" />
-      <h1 class="card-title">Community</h1>
-      <p class="card-text">We understand that lasting change comes from collective effort and work closely with communities to raise
-        awareness and educate on animal rights.</p>
-    </div>
-
-    <div class="info-card">
-      <img src="/static/image/png10.png" />
-      <h1 class="card-title">Integrity</h1>
-      <p class="card-text">We uphold transparency and honesty in all our operations, ensuring that every donation and effort is put to
-        its best use for the welfare of animals.</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
+        <div class="info-card">
+          <img src="static/image/png10.png" />
+          <h1 class="card-title">Integrity</h1>
+          <p class="card-text">We uphold transparency and honesty in all our operations, ensuring that every donation and effort is put to
+            its best use for the welfare of animals.</p>
+        </div>
+      </div>
+    </section>
   </main>
-
-
-
-
-
-
-
 
   <footer class="footer">
     <div class="wrapper footer-content">
       <div class="footer-logo">
-  <div class="logo">
-      <a href="/Home.html">
-        <img src="/static/image/logo1.png" alt="Logo">
-      </a>
-    </div>
-        <!-- <img src="/static/image/logo1.png" alt="AnimalCare Logo" /> -->
+        <div class="logo">
+          <a href="Home.html">
+            <img src="static/image/logo1.png" alt="Logo">
+          </a>
+        </div>
         <h3>AnimalCare</h3>
         <p>Serving and protecting our stray companions with love and care.</p>
       </div>
+
       <div class="Quick-link">
-        <h3 >Quick Links</h3>
-       <ul> <a href="/Home.html" id="f">Home</a></ul>
-         <ul> <a href="/Adoption.html" id="f">Adoption</a></ul>
-          <ul>  <a href="/Health.html" id="f">Health</a></ul>
-            <ul> <a href="/Ngo.html" id="f">NGo</a></ul> 
-              <ul>  <a href="/Contact.html" id="f">Contact</a></ul>
+        <h3>Quick Links</h3>
+        <ul><a href="Home.html" id="f">Home</a></ul>
+        <ul><a href="Adoption.html" id="f">Adoption</a></ul>
+        <ul><a href="Health.html" id="f">Health</a></ul>
+        <ul><a href="Ngo.html" id="f">NGO</a></ul>
+        <ul><a href="Contact.html" id="f">Contact</a></ul>
       </div>
+
       <div class="footer-contact" id="contact">
         <h4>Contact Us</h4>
         <p>Email: support@animalcare.org</p>
         <p>Phone: +91 9876543210</p>
       </div>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; 2025 AnimalCare. All rights reserved.</p>
     </div>
   </footer>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="info-card">
-        <img src="/static/image/png8.png" />
-        <h1 class="card-title">Commitment</h1>
-        <p class="card-text">Our unwavering dedication to animals guides every action, from rescue efforts to advocacy, ensuring their
-          safety, well-being, and compassion.</p>
-   </div>        -->
