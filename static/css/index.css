@@ -1,0 +1,1379 @@
+/* -------------------- GLOBAL RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -------------------- WRAPPER -------------------- */
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 5px;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav img {
+  width: 80px;
+  height: 80px;
+}
+
+#nav-link {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 28px;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  #nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  #nav-link {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: white; /* Mobile nav background */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  #nav-link.show {
+    display: flex;
+  }
+
+  #nav-link li {
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: auto;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* -------------------- HAMBURGER MENU -------------------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.hero-section {
+  background: linear-gradient(to right, #a2dea7, #c3f5cb); /* Soft green gradient */
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.hero-text {
+  color: #003366;
+  max-width: 600px;
+}
+
+.hero-text h5 {
+  color: #004aad;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.highlight-text {
+  color: #ffdd57;
+}
+
+.hero-subtext {
+  color: #f8f8f8;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  background-color: #004aad;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #003366;
+}
+
+.dog-imgg img {
+  width: 340px;
+  height: auto;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .dog-imgg img {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------- NGO SECTION -------------------- */
+.ngo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ngo-card {
+  background: #e6f2e6; /* NGO card background */
+  padding: 15px;
+  border-left: 5px solid #2e8b57;
+  border-radius: 6px;
+}
+
+/* -------------------- DOG BREED SECTION -------------------- */
+.dog-page {
+  background: #f2f9f4; /* Dog breed page background */
+  padding: 40px 0;
+}
+
+.dog-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dog-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.dog-search {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.dog-search:focus {
+  outline: none;
+  box-shadow: 0 0 6px #4caf50;
+}
+
+.dog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.dog-card {
+  background: #ffffff; /* Dog card background */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.dog-card h4 {
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin: 0 0 10px;
+}
+
+.dog-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 6px 0;
+}
+
+.dog-card p strong {
+  color: #1a3d2b;
+}
+
+/* -------------------- CONTACT PAGE -------------------- */
+/* Background image for the whole contact section */
+.contact-bg {
+  background-image: url('/static/image/png116.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+/* Quotation styling */
+.quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+/* Existing contact form styles */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95); /* slightly transparent white */
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #004aad;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+  background-color: #0056b3;
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  background-color: #e0f2f1; /* Footer background */
+  color: #2e7d32;
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+  border-top: 3px solid #4caf50;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: auto;
+}
+
+.footer-logo h3 {
+  margin-top: 10px;
+  color: #1e88e5;
+  font-size: 1.5rem;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+.footer-contact h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1e88e5;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #a5d6a7;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #4e7d6b;
+}
+
+
+/* *******this is for health tips ke liye hai **** */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.card p, .card li {
+  line-height: 1.6;
+}
+main.wrapper {
+  padding: 100px 0; /* Remove left/right padding */
+}
+
+.card-grid {
+  padding: 0 40px; /* Add padding inside grid for layout */
+}
+
+
+
+.section-container {
+  padding: 1.5rem;
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.card-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-card {
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  height: 8rem;
+  width: 8rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #4b5563; /* gray-600 */
+  font-size: 1rem;
+}
+/* ******this is for mission section of the home page . */
+.mission-section {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.mission-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-content {
+  flex: 1;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.video-container {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mission-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.mission{
+  padding-left: 5px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+
+
+
+/* ****Adoption page ****************** */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HERO SECTION WITH BACKGROUND IMAGE */
+.hero-section.hero-bg.adoption-page {
+  background: url('/static/image/png112.jpg') center center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.hero-section.hero-bg.adoption-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h5 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #c8e6c9;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  color: #ffcc70;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: #66bb6a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #43a047;
+}
+
+.dog-imgg {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dog-imgg img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* WHY ADOPT SECTION */
+.why-adopt {
+  background-color: #f1fdf5;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.text-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.text-block ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.image-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ADOPTABLE DOGS SECTION */
+.dog-listing {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.dog-listing h2 {
+  font-size: 2.8rem;
+  color: #2e7d32;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dog-card {
+  background-color: #eafaf1;
+  padding: 20px;
+  border-radius: 14px;
+  width: 280px;
+  box-shadow: 0 6px 16px rgba(0, 128, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-8px);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.dog-card h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.dog-card p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.adopt-btn {
+  display: inline-block;
+  background-color: #66bb6a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #388e3c;
+}
+
+
+/* Dogs Listing Section */
+.dog-listing {
+  background-color: #f7fcf9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dog-listing h2 {
+  font-size: 2.5em;
+  color: #2e8b57;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dog-card {
+  background-color: #ffffff;
+  border: 1px solid #dff0e2;
+  border-radius: 14px;
+  width: 260px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-8px);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.dog-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.3em;
+  color: #444;
+}
+
+.dog-card p {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.adopt-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #79df69;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #ff7f50;
+}
+.info-card1 {
+  background-color: #f1fdf5;
+  padding: 25px 20px;
+  border-radius: 14px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 128, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card1:hover {
+  transform: translateY(-6px);
+}
+
+.card-image1 {
+  width: 90%;             /* slightly smaller than full card */
+  height: 260px;          /* adjust height to keep balance */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Quick-link{
+color:green;
+}
+#f{
+  color: #2e8b57;
+}
+
+
+.redbutton {
+  background-color: #dc2626; /* red-600 */
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border-radius: 0.5rem; /* rounded-lg */
+  display: inline-flex; /* flex for aligning icon + text */
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  transition: all 0.3s ease; /* transition-all duration-300 */
+  text-decoration: none; /* remove underline if link */
+}
+
+.redbutton:hover {
+  background-color: #b91c1c; /* red-700 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //new section of report the dog section a different page with details  */
+
+
+    /* Main content area */
+    main {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8f5f3 100%);
+      min-height: calc(100vh - 200px);
+      padding: 2rem 0;
+    }
+
+    /* Container for form */
+    .form-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Page Title Section */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem 0;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      color: #10b981;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Form Card - White background with shadow */
+    .form-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+      padding: 2.5rem;
+      border: 2px solid #d1fae5;
+    }
+
+    /* Section Title with Icon */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #10b981;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #d1fae5;
+    }
+
+    .camera-icon {
+      font-size: 2rem;
+      filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
+    }
+
+    /* Form Group - Each input field container */
+    .form-group {
+      margin-bottom: 1.75rem;
+    }
+
+    /* Label styling */
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #374151;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .required {
+      color: #ef4444;
+      font-weight: 600;
+    }
+
+    /* Photo Upload Area */
+    .photo-upload {
+      border: 2px dashed #10b981;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .photo-upload:hover {
+      border-color: #059669;
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    }
+
+    .camera-placeholder {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
+    }
+
+    .photo-upload p {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    /* Choose Photo Button */
+    .choose-photo-btn {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border: none;
+      padding: 0.875rem 2.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .choose-photo-btn:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Input Fields, Select, Textarea */
+    select, 
+    textarea, 
+    input[type="text"], 
+    input[type="tel"], 
+    input[type="email"] {
+      width: 100%;
+      background-color: #f9fafb;
+      border: 2px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.875rem 1rem;
+      color: #1f2937;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    /* Focus state for inputs */
+    select:focus, 
+    textarea:focus, 
+    input[type="text"]:focus, 
+    input[type="tel"]:focus, 
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #10b981;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+
+    /* Select dropdown styling */
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 1.25rem;
+      padding-right: 3rem;
+      cursor: pointer;
+    }
+
+    /* Textarea specific styling */
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    /* Placeholder text color */
+    select::placeholder, 
+    textarea::placeholder, 
+    input::placeholder {
+      color: #9ca3af;
+    }
+
+    /* Location Input with Icon */
+    .location-input-wrapper {
+      position: relative;
+    }
+
+    .location-icon {
+      position: absolute;
+      left: 0.875rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+      color: #10b981;
+    }
+
+    .location-input {
+      padding-left: 2.75rem;
+    }
+
+    /* Info Box - Helpful tips for users */
+    .info-box {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-left: 4px solid #10b981;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .info-box p {
+      color: #047857;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .info-box strong {
+      color: #065f46;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border: none;
+      padding: 1.125rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Success Message (hidden by default) */
+    .success-message {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      border: 2px solid #10b981;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 2rem;
+      display: none;
+    }
+
+    .success-message.show {
+      display: block;
+      animation: slideDown 0.4s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-message h3 {
+      color: #065f46;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .success-message p {
+      color: #047857;
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 0 1rem;
+      }
+      
+      .form-card {
+        padding: 1.5rem;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .photo-upload {
+        padding: 2rem 1rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .submit-btn {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+    }
+
+    /* Small helper text under inputs */
+    .helper-text {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+
+    /* Form progress indicator (optional enhancement) */
+    .form-progress {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+
+
+
+
+  
+    /* ===================== HEADER STYLES ===================== */
+    /* header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      position: relative;
+      z-index: 1000;
+      border-bottom: 1px solid #ddd;
+    } */
+
+    /* Red "Add Report" button */
+    /* .redbutton {
+      background-color: #ef4444;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    } */
+
+    /* Desktop navigation links */
+    /* nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    } */
+
+    /* Hamburger icon for mobile */
+    /* .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #000;
+      border-radius: 2px;
+    } */
+
+ /* ===================== MOBILE HEADER ===================== */
+/* Desktop menu */
+#nav-link {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hamburger menu for mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #000;
+  border-radius: 2px;
+}
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between; /* left button, right hamburger */
+    position: relative; /* ensures absolute children align correctly */
+    padding: 1rem 1.5rem; /* optional: adjust header padding */
+  }
+
+  /* Hamburger menu on the right */
+  .menu-toggle {
+    display: flex;
+    position: absolute; /* push to right edge */
+    right: 1.5rem;      /* distance from right edge */
+    top: 50%;           /* vertically center */
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 7px;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 2px;
+  }
+
+  /* Hide desktop menu by default */
+  #nav-link {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;  /* just below header */
+    right: 0;   /* aligns to right edge */
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  /* Show menu when toggled */
+  #nav-link.show {
+    display: flex;
+  }
+
+  /* Keep the red button on the left */
+  .redbutton {
+    order: 1; /* stays left */
+  }
+
+  nav {
+    order: 3; /* nav menu doesn't interfere with header layout */
+  }
+}

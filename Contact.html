@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link href="./static/css/index.css" rel="stylesheet" />
+<script type="module" src="./static/script.js"></script>
+</head>
+<body class="contact-body">
+
+<!-- !-- Header --> 
+<header id="nav" class="wrapper flex justify-between items-center">
+  <!-- Logo which is shows on the left side of the website but i remive it  -->
+  <!-- <div class="logo">
+    <a href="index.html">
+      <img src="static/image/logo1.png" alt="Logo">
+    </a>
+
+  </div> -->
+     <!-- Red "Add Report" Button -->
+    <a href="CompleteInfoDog.html" 
+       class="redbutton">
+      <span style="font-size: 1.2rem; line-height: 1;">+</span> Add Report
+    </a>
+
+  <!-- Menu Toggle for Mobile -->
+  <div class="menu-toggle" id="mobile-menu">
+    <span></span><span></span><span></span>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="flex items-center gap-4">
+    <ul id="nav-link" class="flex gap-4">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Adoption.html">Adoption</a></li>
+      <li><a href="Health.html">Health Tips</a></li>
+      <li><a href="Ngo.html">NGO</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+ 
+  </nav>
+</header>
+
+<main>
+  <section class="hero-section hero-bg contact-bg">
+    <div class="contact-container">
+      <blockquote class="quote-text">
+        "Saving one animal won't change the world, but for that one animal, the world will change forever."
+      </blockquote>
+      <h2>Contact Us</h2>
+
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+
+        <!-- Accurate Address Fields -->
+        <input type="text" name="street" placeholder="Street Address" required />
+        <input type="text" name="city" placeholder="City" required />
+        <input type="text" name="state" placeholder="State / Province" required />
+        <input type="text" name="postal" placeholder="Postal / ZIP Code" required />
+        <input type="text" name="country" placeholder="Country" required />
+
+        <input type="number" name="dogs" placeholder="Number of Dogs" min="0" required />
+        <textarea name="message" rows="5" placeholder="Your Message also with location to reach soon" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrapper footer-content">
+    <div class="footer-logo">
+      <div class="logo">
+        <a href="Home.html">
+          <img src="static/image/logo1.png" alt="Logo" />
+        </a>
+      </div>
+      <h3>AnimalCare</h3>
+      <p>Serving and protecting our stray companions with love and care.</p>
+    </div>
+
+    <div class="Quick-link">
+      <h3>Quick Links</h3>
+      <ul><a href="index.html" id="f">Home</a></ul>
+      <ul><a href="Adoption.html" id="f">Adoption</a></ul>
+      <ul><a href="Health.html" id="f">Health</a></ul>
+      <ul><a href="Ngo.html" id="f">NGO</a></ul>
+      <ul><a href="Contact.html" id="f">Contact</a></ul>
+    </div>
+
+    <div class="footer-contact" id="contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@animalcare.org</p>
+      <p>Phone: +91 9876543210</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AnimalCare. All rights reserved.</p>
+  </div>
+</footer>
+<script type="module"  src="./static/script.js"></script>
+</body>
+</html>

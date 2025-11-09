@@ -1,0 +1,222 @@
+export const data = [
+  {
+    title: "Bhoori Foundation",
+    description: "Local rescue organisation assisting stray indie dogs in Patna.",
+    state: "Bihar",
+    city: "Patna",
+    address: "Patna, Bihar",
+    postalCode: "800001",
+    email: "singhadityakumar566@gmail.com",
+    contact: "(via Instagram)",
+    image: "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg"
+  },
+  {
+    title: "Youth United (Patna chapter)",
+    description: "National NGO with youth-led animal welfare initiatives in Patna.",
+    state: "Bihar",
+    city: "Patna",
+    address: "Patna, Bihar",
+    postalCode: "800002",
+    email: "niharikasingh131309@gmail.com",
+    contact: "(via Youth United website)",
+    image: "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg"
+  },
+  {
+    title: "Vikramshila Gangetic Dolphin Sanctuary",
+    description: "Protected river habitat near Patna for conservation of dolphins & aquatic wildlife.",
+    state: "Bihar",
+    city: "Bhagalpur (near Patna)",
+    address: "Sultanganj–Kahalgaon stretch, Bihar",
+    postalCode: "800003",
+    email: "kumarritikmehra27@gmail.com",
+    contact: "(via sanctuary office)",
+    image: "https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg"
+  },
+  {
+    title: "People for Animals (PFA) Bihar",
+    description: "State branch of India’s largest animal welfare group handling strays & wildlife rescue.",
+    state: "Bihar",
+    city: "Patna",
+    address: "Patna, Bihar",
+    postalCode: "800004",
+    email: "n56325695@gmail.com",
+    contact: "(via PFA Bihar)",
+    image: "https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg"
+  },
+  {
+    title: "Street Animal Welfare (Patna volunteers)",
+    description: "Local volunteer rescue & sterilization drives for strays in Patna.",
+    state: "Bihar",
+    city: "Patna",
+    address: "Various Patna neighbourhoods",
+    postalCode: "800005",
+    email: "n56325695@gmail.com",
+    contact: "(via local FB groups)",
+    image: "https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg"
+  },
+  {
+    title: "Sanjay Gandhi Animal Care Centre",
+    description: "Delhi’s largest city-run shelter treating & rehabilitating strays since 1980.",
+    state: "Delhi",
+    city: "Delhi",
+    address: "Raja Garden, Delhi",
+    postalCode: "800006",
+    email: "n56325695@gmail.com",
+    contact: "+91-9560802425",
+    image: "https://images.pexels.com/photos/933498/pexels-photo-933498.jpeg"
+  },
+  {
+    title: "Friendicoes SECA",
+    description: "Shelter & ambulance service; rescues 1,000+ animals/year in Delhi NCR.",
+    state: "Delhi",
+    city: "Delhi",
+    address: "Defence Colony Flyover Market, Delhi",
+    postalCode: "800007",
+    email: "nikhilkumar14082005@gmail.com",
+    contact: "+91-011-35712931",
+    image: "https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg"
+  },
+  {
+    title: "Red Paws Rescue",
+    description: "Foster-based rescue network for stray dogs and cats in New Delhi.",
+    state: "Delhi",
+    city: "Delhi",
+    address: "Hauz Khas Village, New Delhi",
+    postalCode: "800008",
+    email: "bk2288825@gmail.com",
+    contact: "+91-9958866067",
+    image: "https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg"
+  },
+  {
+    title: "Abhay Daanam",
+    description: "Bird & animal hospital with ambulance services in Ghaziabad/Delhi region.",
+    state: "Uttar Pradesh",
+    city: "Ghaziabad",
+    address: "Karol Bagh, Delhi & Indirapuram, Ghaziabad",
+    postalCode: "800009",
+    email: "n56325695@gmail.com",
+    contact: "(via hospitals)",
+    image: "https://images.pexels.com/photos/46505/swiss-shepherd-dog-dog-pet-portrait-46505.jpeg"
+  },
+  {
+    title: "People for Animals (PFA) Delhi",
+    description: "National animal welfare organisation with rescue & treatment in Delhi.",
+    state: "Delhi",
+    city: "Delhi",
+    address: "Sansad Marg Area, New Delhi",
+    postalCode: "800010",
+    email: "n56325695@gmail.com",
+    contact: "+91-11-23719293",
+    image: "https://images.pexels.com/photos/1906153/pexels-photo-1906153.jpeg"
+  },
+  {
+    title: "Blue Cross of India",
+    description: "One of the oldest shelters & hospitals for stray animals in Chennai & Mumbai circuits.",
+    state: "Tamil Nadu",
+    city: "Chennai",
+    address: "1-A, Eldams Road, Alwarpet, Chennai",
+    postalCode: "800011",
+    email: "n56325695@gmail.com",
+    contact: "044-22354959",
+    image: "https://images.pexels.com/photos/128817/pexels-photo-128817.jpeg"
+  },
+  {
+    title: "Bombay SPCA",
+    description: "Mumbai SPCA cares for dogs, cats, cattle, horses with 24-hr hospital since 1874.",
+    state: "Maharashtra",
+    city: "Mumbai",
+    address: "Parel, Mumbai, Maharashtra",
+    postalCode: "800012",
+    email: "n56325695@gmail.com",
+    contact: "022-24137518",
+    image: "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg"
+  },
+  {
+    title: "Mumbai Animal Association",
+    description: "Local rescue & rehab for street animals in suburban Mumbai.",
+    state: "Maharashtra",
+    city: "Mumbai",
+    address: "Kandivali/Borivali suburbs, Mumbai",
+    postalCode: "800013",
+    email: "n56325695@gmail.com",
+    contact: "(via MAA website)",
+    image: "https://images.pexels.com/photos/164186/pexels-photo-164186.jpeg"
+  },
+  {
+    title: "PAWS Mumbai",
+    description: "Plant & Animals Welfare Society – street rescue, sterilisation & adoptions.",
+    state: "Maharashtra",
+    city: "Mumbai",
+    address: "Mulund, Mumbai, Maharashtra",
+    postalCode: "800014",
+    email: "n56325695@gmail.com",
+    contact: "9820161114",
+    image: "https://images.pexels.com/photos/97082/weimaraner-puppy-dog-snout-97082.jpeg"
+  },
+  {
+    title: "Welfare for Stray Dogs (WSD)",
+    description: "Mumbai NGO focusing on vaccination, sterilization & rescue since 1985.",
+    state: "Maharashtra",
+    city: "Mumbai",
+    address: "Mumbai, Maharashtra",
+    postalCode: "800015",
+    email: "n56325695@gmail.com",
+    contact: "(via WSD contact)",
+    image: "https://images.pexels.com/photos/532310/pexels-photo-532310.jpeg"
+  },
+  {
+    title: "CUPA Trauma Centre",
+    description: "Veterinary hospital by Compassion Unlimited Plus Action for rescue & treatment of injured strays.",
+    state: "Karnataka",
+    city: "Bangalore",
+    address: "KVAFSU Veterinary College Campus, Bellary Road, Hebbal, Bangalore",
+    postalCode: "800016",
+    email: "n56325695@gmail.com",
+    contact: "+91-80-22947300",
+    image: "https://images.pexels.com/photos/245035/pexels-photo-245035.jpeg"
+  },
+  {
+    title: "Charlie’s Animal Rescue Centre (CARE)",
+    description: "Rescue, adoption, medical care of cats & dogs in need across Bengaluru.",
+    state: "Karnataka",
+    city: "Bangalore",
+    address: "Survey No.124, Mitteganahalli Cross, Kogilu Village, Yelahanka Hobli, Bangalore North",
+    postalCode: "800017",
+    email: "n56325695@gmail.com",
+    contact: "+91-9483911110",
+    image: "https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg"
+  },
+  {
+    title: "People For Animals (PFA Bangalore)",
+    description: "Rescue, recuperation, and release of animals in need; ABC programs and ambulance service.",
+    state: "Karnataka",
+    city: "Bangalore",
+    address: "No.67, Uttarahalli Main Road, Kengeri, Bangalore",
+    postalCode: "800018",
+    email: "n56325695@gmail.com",
+    contact: "+91-9900025370",
+    image: "https://images.pexels.com/photos/981062/pexels-photo-981062.jpeg"
+  },
+  {
+    title: "Voice of Stray Dogs (VoSD)",
+    description: "Privately-run rescue service, treatment centre & dog sanctuary; first canine blood bank in India.",
+    state: "Karnataka",
+    city: "Bangalore",
+    address: "Pine Valley Building, Embassy Golf Links, Off Intermediate Ring Road, Bangalore",
+    postalCode: "800019",
+    email: "n56325695@gmail.com",
+    contact: "(via VoSD site)",
+    image: "https://images.pexels.com/photos/1619690/pexels-photo-1619690.jpeg"
+  },
+  {
+    title: "Sarvoham Animal Foundation",
+    description: "Rescue, treat, rehabilitate & rehome street animals; over 2,500 rescues to date.",
+    state: "Karnataka",
+    city: "Bangalore",
+    address: "No.127, 3rd Cross, 1st Main, Aishwarya Layout, Ray Center Road, JP Nagar 8th Phase, Bangalore",
+    postalCode: "800020",
+    email: "n56325695@gmail.com",
+    contact: "1800 102 8032",
+    image: "https://images.pexels.com/photos/333083/pexels-photo-333083.jpeg"
+  }
+];

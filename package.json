@@ -1,0 +1,24 @@
+{
+  "name": "animal-care-website",
+  "version": "1.0.0",
+  "description": "A responsive and user-friendly website dedicated to promoting animal welfare, pet adoption, and responsible care for animals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikhilkumar111/Animal-Care-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Nikhilkumar111/Animal-Care-website/issues"
+  },
+  "homepage": "https://github.com/Nikhilkumar111/Animal-Care-website#readme",
+  "dependencies": {
+    "nodemailer": "^7.0.10"
+  }
+}
