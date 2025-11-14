@@ -1,13 +1,11 @@
-// ========================================
-// NETLIFY FUNCTION - FULLY FIXED (ES MODULES)
-// ========================================
+// netlify/functions/notify-ngo.js
 import nodemailer from "nodemailer";
-import { data as ngoList } from "../functions/data.js";
+import { data as ngoList } from "./data.js"; // make sure path is correct
 
-export async function handler(event, context) {
+export async function handler(event) {
   const headers = {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type, Accept",
+    "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Content-Type": "application/json",
   };
@@ -18,21 +16,19 @@ export async function handler(event, context) {
 
   try {
     const formData = JSON.parse(event.body || "{}");
-    console.log("📥 Received form data:", Object.keys(formData));
 
-    if (!formData.animalType)
+    if (!formData.animalType) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Animal type is required" }) };
+    }
 
     const nearestNGO = findNearestNGO(formData.postalCode, ngoList);
-    if (!nearestNGO)
+    if (!nearestNGO) {
       return { statusCode: 404, headers, body: JSON.stringify({ error: "No nearby NGO found" }) };
+    }
 
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS)
-      return {
-        statusCode: 500,
-        headers,
-        body: JSON.stringify({ error: "Missing SMTP credentials" }),
-      };
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      return { statusCode: 500, headers, body: JSON.stringify({ error: "Missing SMTP credentials" }) };
+    }
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "smtp.gmail.com",
@@ -50,39 +46,32 @@ export async function handler(event, context) {
       <p><b>Description:</b> ${formData.description || "Not provided"}</p>
       <p><b>Address:</b> ${formData.address || "Not provided"}</p>
       <p><b>Postal Code:</b> ${formData.postalCode || "Unknown"}</p>
-      ${
-        formData.imageUrl
-          ? `<p><b>Photo:</b><br><img src="${formData.imageUrl}" width="300" style="border-radius:8px;"/></p>`
-          : ""
-      }
+      ${formData.imageUrl ? `<p><b>Photo:</b><img src="${formData.imageUrl}" width="300"/></p>` : ""}
       <hr>
-      <p>This report was forwarded to: <b>${nearestNGO.name}</b> (${nearestNGO.email})</p>
+      <p>Forwarded to: <b>${nearestNGO.name}</b> (${nearestNGO.email})</p>
     `;
 
     await transporter.sendMail({
       from: `"AnimalCare Alerts" <${process.env.SMTP_USER}>`,
       to: nearestNGO.email,
-      subject: `🚨 ${formData.animalType || "Animal"} Report`,
+      subject: `🚨 ${formData.animalType} Report`,
       html,
     });
 
-    console.log("✅ Email sent to:", nearestNGO.email);
-    return { statusCode: 200, headers, body: JSON.stringify({ success: true, message: "Email sent successfully!" }) };
+    return { statusCode: 200, headers, body: JSON.stringify({ success: true, message: "Email sent!" }) };
   } catch (error) {
-    console.error("❌ Error:", error);
-    return { statusCode: 500, headers, body: JSON.stringify({ error: error.message }) };
+    console.error("Error in notify-ngo:", error);
+    return { statusCode: 500, headers, body: JSON.stringify({ error: "Internal Server Error" }) };
   }
 }
 
-function findNearestNGO(userPostal, list) {
-  const postal = parseInt(userPostal);
-  if (isNaN(postal)) return null;
-
+function findNearestNGO(postal, list) {
+  const code = parseInt(postal);
+  if (isNaN(code)) return null;
   let nearest = null;
   let minDiff = Infinity;
-
   for (const ngo of list) {
-    const diff = Math.abs(parseInt(ngo.postalCode) - postal);
+    const diff = Math.abs(parseInt(ngo.postalCode) - code);
     if (diff < minDiff) {
       minDiff = diff;
       nearest = ngo;

@@ -147,8 +147,10 @@ menuToggle.addEventListener('click', () => {
   const MAX_WIDTH = 800;
   const MAX_HEIGHT = 500;
 
-  const CLOUD_NAME = "dn6stj8vn"; // your Cloudinary cloud name
-  const UPLOAD_PRESET = "animal_reports"; // unsigned preset
+const CLOUD_NAME = "dn6stj8vn";
+const UPLOAD_PRESET = "animal_reports";
+
+
 
   if (uploadBtn && photoInput) {
     uploadBtn.addEventListener('click', () => photoInput.click());
